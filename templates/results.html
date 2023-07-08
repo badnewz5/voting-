@@ -1,0 +1,11 @@
+<h2>
+  Results
+  <a href="{% url 'vote' %}">go back</a>
+</h2>
+<ul>
+  {% for vote in votes %}
+  <li>{{ vote }}</li>
+  {% empty %}
+  <li>No votes yet.</li>
+  {% endfor %}
+</ul>
